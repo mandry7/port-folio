@@ -1,0 +1,19 @@
+.about-container {
+  @apply flex flex-col gap-8  p-10;
+
+  .sub-container {
+    @apply flex flex-col gap-4
+  }
+
+  .title {
+    @apply text-yellow-500 text-4xl font-bold;
+  }
+
+  .card-grid {
+    @apply grid 2xl:grid-cols-6 lg:grid-cols-4  md:grid-cols-4  sm:grid-cols-1 gap-4;
+  }
+
+  .tought {
+    @apply text-yellow-500 h-10 w-56 p-1 rounded-md border border-yellow-500 hover:-translate-y-1 hover:scale-110 transition ease-in-out delay-150
+  }
+}
