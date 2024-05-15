@@ -1,8 +1,8 @@
 .home-container {
-  @apply  p-10;
+  @apply p-10 relative z-10 w-[100%];
 
   .description {
-    @apply border-2 border-yellow-500 rounded-md p-4 bg-gradient-to-r from-gray-800 to-blue-500
+    @apply w-[50%] border-2 border-yellow-500 rounded-md p-4 bg-gradient-to-r from-gray-800 to-blue-500
     shadow-[0_4px_5px_3px_rgba(59,130,280,0.459)];
   }
   .contact {
@@ -19,6 +19,13 @@
   }
   .cursor {
     @apply text-yellow-500 text-3xl font-semibold;
+  }
+
+  .slick {
+    @apply w-[50%];
+    .title {
+      @apply text-3xl text-yellow-500 font-semibold;
+    }
   }
   @keyframes icon {
     0%,
@@ -44,4 +51,9 @@
     transform-origin: 70% 70%;
     display: inline-block;
   }
+
+  .slick-slider {
+    width: 475px;
+  }
+  
 }
