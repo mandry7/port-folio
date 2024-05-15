@@ -25,7 +25,7 @@ export const ProjectList: Project[] = [
     description:
       "It's an application to sharing document and contact candidate by sending a form.My tasks were: maintenance of application and add features,migrating vue2 to vue3,add testing and storybook",
     stack: "Vue2, vue3, typescript , Vuetify, Django, Python, Postgres, git",
-    period: "january 2023 - until now",
+    period: "january 2023 - Mai 2024",
     image:  onBoarding,
   },
   {
@@ -114,7 +114,7 @@ export const skills: Skill[] = [
   { id: 4, name: "javascript", icon:() =><IoLogoJavascript className="w-40 h-20" />, rating: 4 },
   { id: 5, name: "next", icon:() =><BiLogoTypescript className="w-40 h-20" />, rating: 3 },
   { id: 6, name: "node",icon:() =><IoLogoNodejs className="w-40 h-20" />, rating: 3 },
-  { id: 7, name: "git",icon:() =><IoLogoGithub className="w-40 h-20" />, rating: 4 },
+  { id: 7, name: "express",icon:() =><IoLogoGithub className="w-40 h-20" />, rating: 2 },
   { id: 8, name: "java", icon:() =><BiLogoJava className="w-40 h-20" />, rating: 2 },
   { id: 9, name: "spring boot", icon: () =><BiLogoSpringBoot className="w-40 h-20" />, rating: 2 },
 ];

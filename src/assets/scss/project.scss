@@ -1,5 +1,5 @@
 .project-container {
-  @apply container p-10 w-screen m-auto;
+  @apply container relative  z-10 m-auto;
 
   .project-title {
     @apply uppercase text-yellow-500 text-4xl font-bold text-center mb-2;

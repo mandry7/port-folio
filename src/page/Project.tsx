@@ -21,31 +21,29 @@ const ProjectLists = () => {
   }, [search]);
 
   return (
-    <div className="project-container">
-      <div className="mb-8">
-        <h1 className="project-title">My Projects</h1>
-        <p className="project-paragraph">
-          Here are all my projects
-        </p>
+      <div className="project-container">
+        <div className="mb-8">
+          <h1 className="project-title">My Projects</h1>
+          <p className="project-paragraph">Here are all my projects</p>
+        </div>
+        <div className="project-list">
+          {ProjectList.map((project) => (
+            <div
+              key={project.id}
+              onClick={() => navigate(`/project/?id=${project.id}`)}
+              className="project-item"
+            >
+              <CardProject {...project} />
+            </div>
+          ))}
+        </div>
+        {project && (
+          <ModalDetails
+            project={project}
+            deleteQuery={() => navigate(`/project`)}
+          />
+        )}
       </div>
-      <div className="project-list">
-        {ProjectList.map((project) => (
-          <div
-            key={project.id}
-            onClick={() => navigate(`/project/?id=${project.id}`)}
-            className="project-item"
-          >
-            <CardProject {...project} />
-          </div>
-        ))}
-      </div>
-      {project && (
-        <ModalDetails
-          project={project}
-          deleteQuery={() => navigate(`/project`)}
-        />
-      )}
-    </div>
   );
 };
 
