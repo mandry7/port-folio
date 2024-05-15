@@ -13,7 +13,7 @@ const NavBar = () => {
       <nav className="nav-container">
         <div className="nav-item-container">
           <NavLink to="/" className="logo">
-            <img className="w-16" src={logo} />
+            <img className="w-16" src={logo} loading="lazy" />
           </NavLink>
 
           <div className="flex">
@@ -24,7 +24,7 @@ const NavBar = () => {
               }
             >
               <div className="flex items-center">
-                <img className="mx-2 w-12 " src={home} />
+                <img className="mx-2 w-12 " src={home} loading="lazy"/>
                 <span className="ml-4 uppercase">home</span>
               </div>
             </NavLink>
@@ -35,7 +35,7 @@ const NavBar = () => {
               }
             >
               <div className="flex items-center ">
-                <img className="mx-2 w-12 h-12 rounded-full " src={about} />
+                <img className="mx-2 w-12 h-12 rounded-full " src={about} loading="lazy" />
                 <span className="ml-4 uppercase">About</span>
               </div>
             </NavLink>
@@ -46,7 +46,7 @@ const NavBar = () => {
               }
             >
               <div className="flex items-center">
-                <img className="mx-2 w-12" src={project} />
+                <img className="mx-2 w-12" src={project} loading="lazy" />
                 <span className="ml-4 uppercase">projects</span>
               </div>
             </NavLink>
