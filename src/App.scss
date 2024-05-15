@@ -1,5 +1,16 @@
 .App {
-  background: url("./assets/image/background_project.jpg") no-repeat;
-  background-size: cover;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 1) 0%,
+    rgba(31, 41, 55, 1) 100%
+  );
   min-height: 100vh;
+  position: relative;
+
+  #tsparticles {
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+  }
 }

@@ -15,7 +15,6 @@ const absolutePathAliases: { [key: string]: string } = {};
       absolutePathAliases[directory] = path.join(srcPath, directory)
     });
   
-  console.log(absolutePathAliases);
   
   
 // https://vitejs.dev/config/
