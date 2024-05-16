@@ -50,7 +50,7 @@ const Home = () => {
         <div className="description mt-2">
           <div className="greeting flex items-center gap-3">
             <div className="flex flex-col">
-              <h1 className="title">
+              <h1 className="title mb-8">
                 Hello !! <IoHandRightSharp className="icon " />
               </h1>
 
@@ -59,9 +59,9 @@ const Home = () => {
                 <Typewriter
                   options={{
                     strings: [
-                      "Mandrindra RANARIJAONA",
+                      "Mandrindra",
                       "Software Developer",
-                      "Freelancer",
+                      "a Freelancer",
                     ],
                     autoStart: true,
                     loop: true,

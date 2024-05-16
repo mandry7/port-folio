@@ -11,20 +11,20 @@
   }
 
   .title {
-    @apply text-3xl text-gray-300 font-semibold;
+    @apply text-2xl text-gray-300 font-semibold;
   }
 
   .wrapper {
-    @apply text-yellow-500 text-3xl font-semibold;
+    @apply text-yellow-500 text-2xl font-semibold;
   }
   .cursor {
-    @apply text-yellow-500 text-3xl font-semibold;
+    @apply text-yellow-500 text-2xl font-semibold;
   }
 
   .slick {
     @apply w-[50%];
     .title {
-      @apply text-3xl text-yellow-500 font-semibold;
+      @apply text-2xl text-yellow-500 font-semibold;
     }
   }
   @keyframes icon {
