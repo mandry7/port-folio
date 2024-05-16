@@ -25,7 +25,7 @@ const ProjectDetails : React.FC<ProjectDetailsProps> = ({deleteQuery, project}) 
             <div className=" px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
               <div className="flex items-start gap-4">
                 <div className="flex h-72 w-[75%] items-center justify-center rounded-md bg-gray-400 overflow-hidden">
-                  <img  src={image}/>
+                  <img  src={image} loading="lazy"/>
                 </div>
                 <div className="flex flex-col gap-2">
                   <h3

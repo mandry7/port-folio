@@ -22,8 +22,7 @@ const ContactLink = () => {
           <IoLogoLinkedin className="text-yellow-500 text-3xl hover:text-yellow-100 " />
         </a>
         <a
-          href="
-https://api.whatsapp.com/send?phone=+261340700916&text=Hello!"
+          href="https://api.whatsapp.com/send?phone=+261340700916&text=Hello!"
           target="_blank"
           rel="noopener noreferrer"
         >
