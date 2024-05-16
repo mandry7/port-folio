@@ -45,7 +45,7 @@ const ClockView = () => {
           <IoCalendarSharp className="mr-2" />  {date}
         </h1>
         <h1 className="time  flex items-center text-start">
-          <FaClock className=" mr-1"/>  {time}
+          <FaClock className=" mr-2"/>  {time}
         </h1>
       </div>
     </div>
