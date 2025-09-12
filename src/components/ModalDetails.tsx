@@ -1,67 +1,96 @@
-
-import onBoarding from "assets/image/portfolio/onboarding.jpg"
-
+import React, { useState } from "react";
 import { Project } from "type/type";
 
 interface ProjectDetailsProps {
-  project : Project
-  deleteQuery: () => void
+  project: Project;
+  deleteQuery: () => void;
 }
-const ProjectDetails : React.FC<ProjectDetailsProps> = ({deleteQuery, project}) => {
-  const { title, description, image, period, stack} = project
+
+const ProjectDetails: React.FC<ProjectDetailsProps> = ({
+  deleteQuery,
+  project,
+}) => {
+  const { title, description, image, period, stack } = project;
+  const [showImagePreview, setShowImagePreview] = useState(false);
 
   return (
     <div
-      className="relative z-10"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
       aria-labelledby="modal-title"
       role="dialog"
       aria-modal="true"
     >
-      <div className="fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity"></div>
+      {/* Modal Container */}
+      <div className="relative w-full max-w-4xl mx-4 sm:mx-6 bg-gradient-to-r from-gray-900 to-blue-700 rounded-2xl shadow-xl border border-yellow-400 overflow-hidden">
+        <div className="p-6 flex flex-col lg:flex-row gap-6">
+          {/* Project Image */}
+          <div
+            className="flex-shrink-0 w-full lg:w-2/3 h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden cursor-pointer group"
+            onClick={() => setShowImagePreview(true)}
+          >
+            <img
+              src={image}
+              alt={title}
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
 
-      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-        <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-          <div className="relative transform w-[800px] overflow-hidden border-yellow-200 rounded-lg shadow-[0_4px_5px_3px_rgba(234,179,8,0.459)] bg-gradient-to-r from-gray-800 to-blue-500 text-left transition-all">
-            <div className=" px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-              <div className="flex items-start gap-4">
-                <div className="flex h-72 w-[75%] items-center justify-center rounded-md bg-gray-400 overflow-hidden">
-                  <img  src={image} loading="lazy"/>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <h3
-                    className="text-3xl font-semibold leading-6 text-yellow-500 uppercase"
-                    id="modal-title"
-                  >
-                    {title}
-                  </h3>
-                  <div className="mt-2">
-                    <p className="text-md text-gray-200">
-                     {description}
-                    </p>
-                  </div>
-                  <div className="mt-2">
-                    <p className="text-md text-gray-200">
-                      <span className="text-yellow-500 font-semibold capitalize">period : </span>{period}
-                    </p>
-                    <p className="text-md text-gray-200">
-                      <span className="text-yellow-500 font-semibold capitalize">stack : </span>{stack}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className=" px-4 py-3 flex justify-center sm:px-6">
-              <button
-                type="button"
-                className="inline-flex w-full justify-center rounded-md bg-yellow-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-yellow-600 sm:ml-3 sm:w-auto"
-                onClick={deleteQuery}
-              >
-                OK
-              </button>
+          {/* Project Info */}
+          <div className="flex flex-col gap-4 w-full lg:w-1/3">
+            <h3
+              id="modal-title"
+              className="text-2xl md:text-3xl font-bold text-yellow-400 uppercase"
+            >
+              {title}
+            </h3>
+            <p className="text-sm md:text-base text-gray-200 leading-relaxed">
+              {description}
+            </p>
+            <div className="space-y-2">
+              <p className="text-sm md:text-base text-gray-200">
+                <span className="text-yellow-400 font-semibold">Period:</span>{" "}
+                {period}
+              </p>
+              <p className="text-sm md:text-base text-gray-200">
+                <span className="text-yellow-400 font-semibold">Stack:</span>{" "}
+                {stack}
+              </p>
             </div>
           </div>
         </div>
+
+        {/* Footer */}
+        <div className="px-6 py-4 border-t border-gray-700 flex justify-end">
+          <button
+            type="button"
+            className="rounded-md bg-yellow-500 px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-yellow-400 transition"
+            onClick={deleteQuery}
+          >
+            Close
+          </button>
+        </div>
       </div>
+
+      {/* Image Preview Overlay */}
+      {showImagePreview && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+          onClick={() => setShowImagePreview(false)}
+        >
+          <img
+            src={image}
+            alt={title}
+            className="max-w-[95%] max-h-[90%] object-contain rounded-lg shadow-lg"
+          />
+          <button
+            className="absolute top-4 right-6 text-white text-3xl font-bold hover:text-yellow-400"
+            onClick={() => setShowImagePreview(false)}
+          >
+            ✕
+          </button>
+        </div>
+      )}
     </div>
   );
 };

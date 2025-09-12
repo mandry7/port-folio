@@ -6,14 +6,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { ProjectList } from "data/data";
 import me7 from "assets/image/me7.png";
 
-import "assets/scss/home.scss";
-import "assets/scss/about.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import ContactLink from "components/ContactLink";
 import HomeDescription from "components/HomeDescription";
-import ClockView from "components/ClockView";
 import CardProject from "components/CardProject";
 
 const Home = () => {
@@ -21,72 +18,66 @@ const Home = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     arrows: false,
     centerMode: true,
   };
 
   return (
-    <div className="home-container">
-      <div className="flex items-center gap-8">
-        <div className="flex flex-col items-center">
+    <div className="relative z-40 text-white px-6 md:px-12 py-12 h-screen overflow-auto">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col items-center gap-6 lg:w-1/4">
           <img
             src={me7}
             alt="me"
-            className="w-40 h-40 rounded-full border-2 border-yellow-500"
+            className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 rounded-full border-4 border-yellow-500 shadow-lg shadow-yellow-500/30"
             loading="lazy"
           />
-          <ContactLink />{" "}
-          <div className="flex">
-            <ClockView />
-            <div className="meteo"></div>
-          </div>
+          <ContactLink />
         </div>
+        <div className="flex-1 bg-gradient-to-r from-gray-800 to-blue-600 border border-gray-700 rounded-2xl shadow-xl p-6 md:p-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4 flex items-center gap-3">
+            Hello! <IoHandRightSharp className="text-yellow-500 text-4xl animate-waving-hand" />
+          </h1>
 
-        <div className="description mt-2">
-          <div className="greeting flex items-center gap-3">
-            <div className="flex flex-col">
-              <h1 className="title mb-8">
-                Hello !! <IoHandRightSharp className="icon " />
-              </h1>
-
-              <div className="flex gap-2">
-                <h1 className="title">I am </h1>
-                <Typewriter
-                  options={{
-                    strings: [
-                      "Mandrindra",
-                      "Software Developer",
-                      "a Freelancer",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                    deleteSpeed: 50,
-                    wrapperClassName: "wrapper",
-                    cursorClassName: "cursor",
-                  }}
-                />
-              </div>
-            </div>
+          <div className="flex flex-wrap gap-2 items-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-gray-200">
+              I am
+            </h2>
+            <Typewriter
+              options={{
+                strings: ["Mandrindra", "Software Developer", "Freelancer"],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+                wrapperClassName: "text-yellow-400 text-2xl md:text-3xl font-bold",
+                cursorClassName: "text-yellow-400 text-2xl md:text-3xl font-bold",
+              }}
+            />
           </div>
 
           <HomeDescription />
         </div>
-        <div className="slick ml-16">
-          <Link className=" text-yellow-500 title underline" to="/project">
-            ALL PROJECT HERE
+
+        {/* Right Column (Projects) */}
+        <div className="lg:w-1/3 flex flex-col items-center">
+          <Link
+            className="text-yellow-400 text-lg md:text-xl font-semibold underline hover:text-yellow-300 transition"
+            to="/project"
+          >
+            All Projects →
           </Link>
-          <div className="mt-5">
+          <div className="mt-6 w-full max-w-md">
             <Slider {...settings}>
               {ProjectList.map((project) => (
                 <div
                   key={project.id}
                   onClick={() => navigate(`/project/?id=${project.id}`)}
-                  className="project-item"
+                  className="cursor-pointer transition-transform hover:scale-[1.02]"
                 >
                   <CardProject {...project} />
                 </div>

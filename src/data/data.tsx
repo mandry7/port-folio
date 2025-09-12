@@ -7,99 +7,119 @@ import {
   IoLogoGithub,
 } from "react-icons/io5";
 import { BiLogoTypescript, BiLogoJava, BiLogoSpringBoot } from "react-icons/bi";
+    import { SiNextdotjs } from 'react-icons/si';
 
-import onBoarding from 'assets/image/portfolio/onboarding.jpg'
-import taxi from 'assets/image/portfolio/tcab-img-2.png'
-import nft from 'assets/image/portfolio/admire.png'
-import wip from 'assets/image/portfolio/wip2.webp'
-import elan from 'assets/image/portfolio/autorisations.jpg'
-import atamoz from 'assets/image/portfolio/atamoz.png'
-import BIM from 'assets/image/portfolio/BIM.jpg'
-import game from 'assets/image/portfolio/17933.jpg'
-import unyck from 'assets/image/portfolio/unyck.png'
+import onBoarding from "assets/image/portfolio/onboarding.jpg";
+import taxi from "assets/image/portfolio/tcab-img-2.png";
+import nft from "assets/image/portfolio/admire.png";
+import wip from "assets/image/portfolio/wip2.webp";
+import elan from "assets/image/portfolio/autorisations.jpg";
+import atamoz from "assets/image/portfolio/atamoz.png";
+import BIM from "assets/image/portfolio/BIM.jpg";
+import game from "assets/image/portfolio/17933.jpg";
+import unyck from "assets/image/portfolio/unyck.png";
+import resume from "assets/image/portfolio/resume.png";
+import spw from "assets/image/portfolio/spw.png";
 
 export const ProjectList: Project[] = [
   {
     id: 1,
-    title: "Onboarding HR",
+    title: "Glass Management",
     description:
-      "It's an application to sharing document and contact candidate by sending a form.My tasks were: maintenance of application and add features,migrating vue2 to vue3,add testing and storybook",
-    stack: "Vue2, vue3, typescript , Vuetify, Django, Python, Postgres, git",
-    period: "january 2023 - Mai 2024",
-    image:  onBoarding,
+      "Enterprise platform for managing glass production. Responsibilities: architecture analysis, security review, and feature development.",
+    stack: "Next.js, TypeScript, SCSS, Tailwind, Git",
+    period: "September 2024 – until now",
+    image: spw,
   },
   {
     id: 2,
-    title: "Taxi management",
+    title: "Resume Builder",
     description:
-      "It's an application used to manage taxi course and command.My tasks were: maintenance of application and add features,testing",
-    stack: "Angular 9, Java 8, Springboot, Maria DB, git",
-    period: "September 2022 - December 2O22",
-    image: taxi,
+      "Web platform for creating and customizing resumes. Responsibilities: feature development, UI improvements, and maintenance.",
+    stack: "Next.js, Styled Components, Git",
+    period: "March 2024 – August 2024",
+    image: resume,
   },
   {
     id: 3,
-    title: "Marketplace NFT",
+    title: "Onboarding HR",
     description:
-      "It's an application where we can sell NFT .My tasks were:create front architecture,page integration and developing features",
-    stack: "Vuejs 3, Typescript, Pinia, Quasar, Nest js, PostgreSQL, git",
-    period: "Mai 2022 - August 2O22",
-    image: nft,
+      "HR application for sharing documents and managing candidate onboarding. Responsibilities: Vue 2 → Vue 3 migration, feature implementation, testing, and Storybook setup.",
+    stack: "Vue 2/3, TypeScript, Vuetify, Django, Python, PostgreSQL, Git",
+    period: "January 2023 – May 2024",
+    image: onBoarding,
   },
-
   {
     id: 4,
-    title: "Job searching",
+    title: "Taxi Management",
     description:
-      "It's a mobile app where we can create job offer for the companies and applying for the candidate.My tasks were:settings screen and developping features",
-    stack: "REACT NATIVE, Typescript, Redux, Express, Mongo, git",
-    period: "February 2022 - April 2022",
-    image: wip,
+      "System for managing taxi rides and bookings. Responsibilities: feature implementation, bug fixes, and testing.",
+    stack: "Angular 9, Java 8, Spring Boot, MariaDB, Git",
+    period: "September 2022 – December 2022",
+    image: taxi,
   },
   {
     id: 5,
-    title: "Tracking files",
+    title: "NFT Marketplace",
     description:
-      "It's a platform where a lawyer and jurist can share and manage document with a editor.My tasks were: maintenance of application and development of new features",
-    stack: "REACT js, Bootstrap, Redux, symfony, mysql, git",
-    period: "january 2023 - until now",
-    image: elan,
+      "E-commerce platform for NFT sales. Responsibilities: front-end architecture setup, UI integration, and feature development.",
+    stack: "Vue 3, TypeScript, Pinia, Quasar, NestJS, PostgreSQL, Git",
+    period: "May 2022 – August 2022",
+    image: nft,
   },
   {
     id: 6,
-    title: "Bet and game management",
+    title: "Job Searching App",
     description:
-      "It's an application application (Back office) where we can manage bet, game and users.My tasks were:integration of page and developing features",
+      "Mobile app for job posting and applications. Responsibilities: implemented settings screens and developed new features.",
+    stack: "React Native, TypeScript, Redux, Express, MongoDB, Git",
+    period: "February 2022 – April 2022",
+    image: wip,
+  },
+  {
+    id: 7,
+    title: "File Tracking Platform",
+    description:
+      "Document management platform for lawyers and jurists with collaborative editing. Responsibilities: maintenance and feature development.",
+    stack: "React, Bootstrap, Redux, Symfony, MySQL, Git",
+    period: "October 2021 – January 2022",
+    image: elan,
+  },
+  {
+    id: 8,
+    title: "Bet & Game Management",
+    description:
+      "Back-office platform to manage bets, games, and users. Responsibilities: page integration and feature development.",
     stack:
-      "React js, Material UI, Redux, Java, Spring boot, Mongo, Elastic Search, SVN",
+      "React, Material UI, Redux, Java, Spring Boot, MongoDB, ElasticSearch, SVN",
     period: "June 2021 – August 2021",
     image: game,
   },
   {
-    id: 7,
-    title: "Rental property",
+    id: 9,
+    title: "Rental Property",
     description:
-      "It's an application where tenant can search property and rent it.My tasks were: maintenance of application and add features,migrationg vue2 to vue3",
-    stack: "React,Typescript, Bootstrap, Flux, Laravel, MySql, git",
+      "Platform for tenants to search and rent properties. Responsibilities: Vue 2 → Vue 3 migration, maintenance, and feature development.",
+    stack: "React, TypeScript, Bootstrap, Flux, Laravel, MySQL, Git",
     period: "March 2021 – June 2021",
     image: atamoz,
   },
   {
-    id: 8,
+    id: 10,
     title: "Building Information Modeling",
     description:
-      "It's an  application where we can manage building and watch it in 3D.My tasks were: maintenance of application and add features",
-    stack: "React js, Redux, Java, SpringBoot, Mongo,SVN ",
-    period: "October 2020 – February 2021 ",
+      "3D building management application. Responsibilities: maintenance and feature development.",
+    stack: "React, Redux, Java, Spring Boot, MongoDB, SVN",
+    period: "October 2020 – February 2021",
     image: BIM,
   },
   {
-    id: 9,
-    title: "Project management and social network",
+    id: 11,
+    title: "Project Management & Social Network",
     description:
-      "A platform where we can manage project and networking with teams.My tasks were: maintenance of application and add features",
-    stack: "Angular 7, Bootstrap, Symfony, MySql, SVN",
-    period: "Mars 2020 – September 2020 ",
+      "Collaboration platform for project management and team networking. Responsibilities: maintenance, new feature development.",
+    stack: "Angular 7, Bootstrap, Symfony, MySQL, SVN",
+    period: "March 2020 – September 2020",
     image: unyck,
   },
 ];
@@ -108,13 +128,58 @@ export const getprojectDetails = (id: number) =>
   ProjectList.filter((project) => project.id === id).shift();
 
 export const skills: Skill[] = [
-  { id: 1, name: "react", icon:() =><IoLogoReact className="w-40 h-20" />, rating: 4 },
-  { id: 2, name: "vue", icon: () =><IoLogoVue className="w-40 h-20" />, rating: 4 },
-  { id: 3, name: "typescript", icon:() =><BiLogoTypescript className="w-40 h-20" />, rating: 4 },
-  { id: 4, name: "javascript", icon:() =><IoLogoJavascript className="w-40 h-20" />, rating: 4 },
-  { id: 5, name: "next", icon:() =><BiLogoTypescript className="w-40 h-20" />, rating: 3 },
-  { id: 6, name: "node",icon:() =><IoLogoNodejs className="w-40 h-20" />, rating: 3 },
-  { id: 7, name: "express",icon:() =><IoLogoGithub className="w-40 h-20" />, rating: 2 },
-  { id: 8, name: "java", icon:() =><BiLogoJava className="w-40 h-20" />, rating: 2 },
-  { id: 9, name: "spring boot", icon: () =><BiLogoSpringBoot className="w-40 h-20" />, rating: 2 },
+  {
+    id: 1,
+    name: "react",
+    icon: () => <IoLogoReact className="w-40 h-20" />,
+    rating: 4,
+  },
+  {
+    id: 2,
+    name: "vue",
+    icon: () => <IoLogoVue className="w-40 h-20" />,
+    rating: 4,
+  },
+  {
+    id: 3,
+    name: "typescript",
+    icon: () => <BiLogoTypescript className="w-40 h-20" />,
+    rating: 4,
+  },
+  {
+    id: 4,
+    name: "javascript",
+    icon: () => <IoLogoJavascript className="w-40 h-20" />,
+    rating: 4,
+  },
+  {
+    id: 5,
+    name: "next",
+    icon: () => <SiNextdotjs className="w-40 h-20" />,
+    rating: 3,
+  },
+  {
+    id: 6,
+    name: "node",
+    icon: () => <IoLogoNodejs className="w-40 h-20" />,
+    rating: 3,
+  },
+  {
+    id: 7,
+    name: "express",
+    icon: () => <IoLogoGithub className="w-40 h-20" />,
+    rating: 2,
+  },
+  {
+    id: 8,
+    name: "java",
+    icon: () => <BiLogoJava className="w-40 h-20" />,
+    rating: 2,
+  },
+  {
+    id: 9,
+    name: "spring boot",
+    icon: () => <BiLogoSpringBoot className="w-40 h-20" />,
+    rating: 2,
+  },
 ];

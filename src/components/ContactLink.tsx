@@ -4,7 +4,6 @@ import { MdContactMail } from "react-icons/md";
 const ContactLink = () => {
   return (
     <div className="contact">
-      <h1 className="title uppercase">CONTACT</h1>
       <div className="flex gap-6 ">
         <a
           href="https://github.com/Mandrindra7?tab=repositories"

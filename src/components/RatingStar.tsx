@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 
 interface Rating {
   rating: number;
@@ -6,22 +6,24 @@ interface Rating {
 }
 
 const RatingStar: React.FC<Rating> = ({ rating, id }) => {
-  const note = (stars: number) => `★★★★★☆☆☆☆☆`.slice(5 - stars, 10 - stars);
+  const note = useCallback((stars: number) => `★★★★★☆☆☆☆☆`.slice(5 - stars, 10 - stars), []);
 
-  const showStars = (stars: number, ids: number) => {
-    var div = document.createElement("div");
+  const showStars = useCallback(
+    (stars: number, ids: number) => {
+      var div = document.createElement("div");
 
-    div.append(`${note(stars)}`);
-    div.classList.add(`text-xl`);
-    div.classList.add(`text-yellow-500`);
+      div.append(`${note(stars)}`);
+      div.classList.add(`text-xl`);
+      div.classList.add(`text-yellow-500`);
 
-    //div.style.color = "yellow";
-    document.getElementById(`stars-${ids.toString()}`)!.append(div);
-  };
+      document.getElementById(`stars-${ids.toString()}`)!.append(div);
+    },
+    [rating, id]
+  );
 
   useEffect(() => {
     showStars(rating, id);
-  }, [id]);
+  }, [rating, id]);
 
   return (
     <div className="flex items-center">

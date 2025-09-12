@@ -4,24 +4,14 @@ const HomeDescription = () => {
   return (
     <div className="slide mt-8">
       <p className="text-xl text-gray-300">
-        I love to resolve problem that's why I chose programming
-      </p>
-      <p className="text-xl text-gray-300">
-        I am really good in{" "}
         <span className="text-yellow-500 font-medium uppercase">
-          javascript{" "}
-        </span>
-        and his framework{" "}
-        <span className="text-yellow-500 font-medium uppercase">REACT</span> and{" "}
-        <span className="text-yellow-500 font-medium uppercase">VUE</span> but{" "}
-   I have already worked in{" "}
-        <span className="text-yellow-500 font-medium uppercase">JAVA </span>
-        and <span className="text-yellow-500 font-medium uppercase">NODE</span>
+          JavaScript/TypeScript
+        </span>{" "}
+        Developer with 5+ years of experience building scalable web and mobile
+        apps using React, Vue, and backend frameworks like express js and Spring
+        Boot. Passionate about clean code, performance, and delivering end-user
+        value through reliable UI/UX
       </p>
-      <p className="text-xl text-gray-300">
-        I am a friendly guy and good in communication
-      </p>
-      <p className="text-xl text-gray-300">I am punctual and honest</p>
     </div>
   );
 };
