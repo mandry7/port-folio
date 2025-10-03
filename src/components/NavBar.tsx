@@ -5,7 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import home from "assets/image/homepiece.svg";
 import about from "assets/image/pxfuel.jpg";
 import project from "assets/image/project.png";
-import logo from "assets/image/mylogo.svg";
+import logo from "assets/image/m.png";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +48,7 @@ const NavBar = () => {
           to="/"
           className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white hover:cursor-pointer hover:-translate-y-1 hover:scale-110 transition ease-in-out delay-150"
         >
-          <img className="w-8 sm:w-16" src={logo} loading="lazy" />
+          <img className="w-12 sm:w-16" src={logo} loading="lazy" />
         </NavLink>
 
         <div className="hidden md:flex md:items-center gap-4">

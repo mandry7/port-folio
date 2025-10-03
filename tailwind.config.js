@@ -14,6 +14,7 @@ export default {
         wave: "wave 1s ease infinite", // default (can override duration inline)
       },
     },
+    sans: ["Proxima Nova Regular", "sans-serif"],
   },
   plugins: [require("tailwind-scrollbar")],
 };
