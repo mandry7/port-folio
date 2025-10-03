@@ -10,7 +10,7 @@ const ContactLink = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <IoLogoGithub className="text-yellow-500 text-3xl cursor-pointer hover:text-yellow-100" />
+          <IoLogoGithub className="text-[#F4991A] text-3xl cursor-pointer hover:text-[#F4991A]/70" />
         </a>
         <a
           href="https://www.linkedin.com/in/mandrindra-ranarijaona-793a89147/"
@@ -18,7 +18,7 @@ const ContactLink = () => {
           rel="noopener noreferrer"
         >
           {" "}
-          <IoLogoLinkedin className="text-yellow-500 text-3xl hover:text-yellow-100 " />
+          <IoLogoLinkedin className="text-[#F4991A] text-3xl hover:text-[#F4991A]/70 " />
         </a>
         <a
           href="https://api.whatsapp.com/send?phone=+261340700916&text=Hello!"
@@ -26,7 +26,7 @@ const ContactLink = () => {
           rel="noopener noreferrer"
         >
           {" "}
-          <IoLogoWhatsapp className="text-yellow-500 text-3xl hover:text-yellow-100" />
+          <IoLogoWhatsapp className="text-[#F4991A] text-3xl hover:text-[#F4991A]/70" />
         </a>
 
         <a
@@ -34,7 +34,7 @@ const ContactLink = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <MdContactMail className="text-yellow-500 text-3xl hover:text-yellow-100" />
+          <MdContactMail className="text-[#F4991A] text-3xl hover:text-[#F4991A]/70" />
         </a>
       </div>
     </div>

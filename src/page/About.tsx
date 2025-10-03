@@ -8,8 +8,8 @@ const About = () => {
   const [skillList] = useState<Skill[]>(skills);
 
   return (
-    <div className="relative z-40 flex flex-col w-full h-screen overflow-auto">
-      <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 lg:px-10 lg:py-12">
+    <div className="relative z-40 flex flex-col w-full min-h-screen text-gray-900 dark:text-white pt-20 md:pt-24">
+      <div className="flex-1 px-4 pb-6 sm:px-6 sm:pb-8 md:px-8 md:pb-10 lg:px-10 lg:pb-12">
         <div className="max-w-7xl mx-auto flex flex-col gap-6 sm:gap-8 md:gap-10">
           <h1 className="text-yellow-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl  font-bold text-center">
             WHO AM I?
@@ -18,25 +18,25 @@ const About = () => {
           {/* Two-column layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {/* About Section */}
-            <div className="bg-gray-900/80 flex flex-col gap-6 p-6 sm:p-8 md:p-10 text-white font-sans rounded-xl shadow-lg">
+            <div className="bg-gradient-to-r from-gray-100 to-[#344F1F]/90 dark:bg-gradient-to-r dark:from-gray-900 dark:to-[#344F1F] flex flex-col gap-6 p-6 sm:p-8 md:p-10 text-gray-900 dark:text-white font-sans rounded-xl shadow-lg">
               <div className="text-center lg:text-left">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-yellow-500 tracking-wide">
                   Mandrindra RANARIJAONA
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl font-semibold mt-2 text-gray-300">
+                <p className="text-base sm:text-lg md:text-xl font-semibold mt-2 text-gray-700 dark:text-gray-300">
                   Freelance Software Developer
                 </p>
-                <p className="text-sm sm:text-base text-gray-500 mt-1">
+                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-500 mt-1">
                   Antananarivo, Madagascar
                 </p>
               </div>
 
               <div className="space-y-4 sm:space-y-6">
-                <div className="border-b border-gray-700 pb-4">
+                <div className="border-b border-gray-200 dark:border-gray-700 pb-4">
                   <h2 className="text-xl sm:text-2xl font-bold text-yellow-500">
                     About Me
                   </h2>
-                  <p className="mt-2 text-gray-400 leading-relaxed">
+                  <p className="mt-2 text-gray-700 dark:text-gray-400 leading-relaxed">
                     I am a software developer with a strong foundation in a
                     variety of technologies. I hold a Master II degree from
                     ESPA, which has equipped me with the skills to tackle
@@ -45,11 +45,11 @@ const About = () => {
                   </p>
                 </div>
 
-                <div className="border-b border-gray-700 pb-4">
+                <div className="border-b border-gray-200 dark:border-gray-700 pb-4">
                   <h2 className="text-xl sm:text-2xl font-bold text-yellow-500">
                     Education & Skills
                   </h2>
-                  <ul className="mt-2 text-gray-400 space-y-2">
+                  <ul className="mt-2 text-gray-700 dark:text-gray-400 space-y-2">
                     <li className="flex items-start">
                       <span className="text-yellow-500 mr-2">&bull;</span>
                       <span>
@@ -72,7 +72,7 @@ const About = () => {
                   <h2 className="text-xl sm:text-2xl font-bold text-yellow-500">
                     Personal Interests
                   </h2>
-                  <p className="mt-2 text-gray-400 leading-relaxed flex flex-col gap-2">
+                  <p className="mt-2 text-gray-700 dark:text-gray-400 leading-relaxed flex flex-col gap-2">
                     <span className="flex items-center gap-2">
                       <FaGamepad className="text-yellow-500" /> Playing games
                     </span>

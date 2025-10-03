@@ -26,18 +26,18 @@ export const Options: ISourceOptions = {
   defaultThemes: {},
   delay: 0,
   fullScreen: {
-    enable: false,
-    zIndex: -100,
+    enable: true,
+    zIndex: 0,
   },
   detectRetina: true,
   duration: 0,
-  fpsLimit:120,
+  fpsLimit: 120,
   interactivity: {
     detectsOn: "window",
     events: {
       onClick: {
         enable: true,
-        mode:[ "push", "attrack"],
+        mode: ["push", "attract"],
       },
       onDiv: {
         selectors: [],
@@ -47,7 +47,7 @@ export const Options: ISourceOptions = {
       },
       onHover: {
         enable: true,
-        mode:["grab", "bubble"],
+        mode: ["grab", "bubble"],
         parallax: {
           enable: false,
           force: 2,
@@ -190,24 +190,24 @@ export const Options: ISourceOptions = {
   manualParticles: [],
   particles: {
     number: {
-      value: 80
+      value: 50,
     },
     color: {
       value: "#EAB380",
       animation: {
         enable: true,
         speed: 20,
-        sync: true
-      }
+        sync: true,
+      },
     },
     shape: {
-      type: "circle"
+      type: "circle",
     },
     opacity: {
-      value: 0.5
+      value: 0.5,
     },
     size: {
-      value: { min: 1, max: 3 }
+      value: { min: 1, max: 3 },
     },
     links: {
       enable: true,
@@ -218,19 +218,55 @@ export const Options: ISourceOptions = {
       triangles: {
         enable: true,
         color: "#EAB308",
-        opacity: 0.09
-      }
+        opacity: 0.09,
+      },
     },
     move: {
       enable: true,
       speed: 4,
       direction: "none",
-      outModes: "out"
-    }
+      outModes: "out",
+    },
   },
   pauseOnBlur: true,
   pauseOnOutsideViewport: true,
-  responsive: [],
+  responsive: [
+    {
+      maxWidth: 1024,
+      options: {
+        particles: {
+          number: { value: 40 },
+          move: { speed: 3 },
+        },
+      },
+    },
+    {
+      maxWidth: 768,
+      options: {
+        interactivity: {
+          events: { onHover: { enable: false }, onClick: { enable: false } },
+        },
+        particles: {
+          number: { value: 24 },
+          links: { enable: true, distance: 80, opacity: 0.35 },
+          move: { speed: 2 },
+        },
+      },
+    },
+    {
+      maxWidth: 480,
+      options: {
+        interactivity: {
+          events: { onHover: { enable: false }, onClick: { enable: false } },
+        },
+        particles: {
+          number: { value: 16 },
+          links: { enable: true, distance: 60, opacity: 0.3 },
+          move: { speed: 1.2 },
+        },
+      },
+    },
+  ],
   smooth: false,
   style: {},
   themes: [],

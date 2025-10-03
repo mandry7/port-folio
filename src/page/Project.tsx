@@ -19,12 +19,12 @@ const ProjectLists = () => {
   }, [search]);
 
   return (
-    <div className="container relative z-10 m-auto overflow-y-scroll h-dvh scrollbar-thin no-scrollbar scrollbar-thumb-blue-500 scrollbar-track-yellow-100">
+    <div className="container relative z-10 m-auto min-h-screen scrollbar-thin no-scrollbar scrollbar-thumb-[#344F1F] scrollbar-track-[rgba(244,153,26,0.2)] text-gray-900 dark:text-white pt-20 md:pt-24">
       <div className="mb-8">
-        <h1 className="uppercase text-yellow-500 text-4xl font-bold text-center mb-2">
+        <h1 className="uppercase text-[#F4991A] text-4xl font-bold text-center mb-2">
           My Projects
         </h1>
-        <p className="text-lg text-gray-300 font-medium text-center">
+        <p className="text-lg text-gray-700 dark:text-gray-300 font-medium text-center">
           Here are all my projects
         </p>
       </div>

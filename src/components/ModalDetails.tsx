@@ -15,13 +15,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 dark:bg-black/70 backdrop-blur-sm"
       aria-labelledby="modal-title"
       role="dialog"
       aria-modal="true"
     >
       {/* Modal Container */}
-      <div className="relative w-full max-w-4xl mx-4 sm:mx-6 bg-gradient-to-r from-gray-900 to-blue-700 rounded-2xl shadow-xl border border-yellow-400 overflow-hidden">
+      <div className="relative w-full max-w-4xl mx-4 sm:mx-6 bg-gradient-to-r from-gray-100 to-[#344F1F]/90 dark:bg-gradient-to-r dark:from-gray-900 dark:to-[#344F1F] rounded-2xl shadow-xl border border-gray-200 dark:border-yellow-400 overflow-hidden text-gray-900 dark:text-white">
         <div className="p-6 flex flex-col lg:flex-row gap-6">
           {/* Project Image */}
           <div
@@ -40,20 +40,24 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
           <div className="flex flex-col gap-4 w-full lg:w-1/3">
             <h3
               id="modal-title"
-              className="text-2xl md:text-3xl font-bold text-yellow-400 uppercase"
+              className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-yellow-400 uppercase"
             >
               {title}
             </h3>
-            <p className="text-sm md:text-base text-gray-200 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
               {description}
             </p>
             <div className="space-y-2">
-              <p className="text-sm md:text-base text-gray-200">
-                <span className="text-yellow-400 font-semibold">Period:</span>{" "}
+              <p className="text-sm md:text-base text-gray-700 dark:text-gray-200">
+                <span className="text-gray-900 dark:text-yellow-400 font-semibold">
+                  Period:
+                </span>{" "}
                 {period}
               </p>
-              <p className="text-sm md:text-base text-gray-200">
-                <span className="text-yellow-400 font-semibold">Stack:</span>{" "}
+              <p className="text-sm md:text-base text-gray-700 dark:text-gray-200">
+                <span className="text-gray-900 dark:text-yellow-400 font-semibold">
+                  Stack:
+                </span>{" "}
                 {stack}
               </p>
             </div>
@@ -61,7 +65,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-gray-700 flex justify-end">
+        <div className="px-6 py-4 border-t border-gray-200 dark:border-gray-700 flex justify-end">
           <button
             type="button"
             className="rounded-md bg-yellow-500 px-5 py-2 text-sm font-semibold text-white shadow-md hover:bg-yellow-400 transition"

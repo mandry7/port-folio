@@ -3,7 +3,7 @@ import {
   IoLogoReact,
   IoLogoVue,
   IoLogoJavascript,
-  IoLogoNodejs,
+  IoLogoNodejs, 
   IoLogoGithub,
 } from "react-icons/io5";
 import { BiLogoTypescript, BiLogoJava, BiLogoSpringBoot } from "react-icons/bi";

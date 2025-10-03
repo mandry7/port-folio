@@ -1,16 +1,8 @@
 .App {
-  background: radial-gradient(
-    circle,
-    rgb(4, 91, 184) 0%,
-    rgba(31, 41, 55, 1) 100%
-  );
-  height: 100vh;
+  background: transparent;
   position: relative;
   overflow: hidden;
   #tsparticles {
-    height: 100%;
-    position: absolute;
-    top: 100px;
-    width: 100%;
+    position: static;
   }
 }
